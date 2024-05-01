@@ -2,7 +2,6 @@
 
 import { Title, Text, Avatar, Button, Popover } from 'rizzui';
 import cn from '@/utils/class-names';
-import { routes } from '@/config/routes';
 import { signOut } from 'next-auth/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';

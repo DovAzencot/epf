@@ -8,8 +8,6 @@ import { Title } from 'rizzui';
 import cn from '@/utils/class-names';
 import { CartItem } from '@/types';
 import Link from 'next/link';
-import { routes } from '@/config/routes';
-import { generateSlug } from '@/utils/generate-slug';
 import SimpleBar from '@/components/ui/simplebar';
 
 export default function POSOrderProductsTwo({
@@ -65,9 +63,7 @@ export default function POSOrderProductsTwo({
                     className="mb-1 truncate font-inter text-sm font-semibold text-gray-900"
                   >
                     <Link
-                      href={routes.eCommerce.productDetails(
-                        generateSlug(item.name)
-                      )}
+                      href={''}
                     >
                       {item.name}
                     </Link>

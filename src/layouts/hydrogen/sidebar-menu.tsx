@@ -1,11 +1,9 @@
 import Link from 'next/link';
 import { Fragment } from 'react';
 import { usePathname } from 'next/navigation';
-import { Title, Collapse } from 'rizzui';
+import { Title } from 'rizzui';
 import cn from '@/utils/class-names';
-import { PiCaretDownBold } from 'react-icons/pi';
 import { menuItems } from '@/layouts/hydrogen/menu-items';
-import StatusBadge from '@/components/get-status-badge';
 
 export function SidebarMenu() {
   const pathname = usePathname();

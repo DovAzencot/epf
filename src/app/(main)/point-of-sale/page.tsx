@@ -7,11 +7,11 @@ import POSDrawer from '@/app/shared/point-of-sale/pos-drawer';
 import PosSearch from '@/app/shared/point-of-sale/pos-search';
 
 export const metadata = {
-  ...metaObject('Point of Sale'),
+  ...metaObject('Menu'),
 };
 
 const pageHeader = {
-  title: 'Point of Sale (POS)',
+  title: 'Menu',
   breadcrumb: [
    
   ],

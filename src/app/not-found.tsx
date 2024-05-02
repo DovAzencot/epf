@@ -31,7 +31,7 @@ export default function NotFound() {
             as="h1"
             className="text-[22px] font-bold leading-normal text-gray-1000 lg:text-3xl"
           >
-            Sorry, the page not found
+            Oups, the page not found
           </Title>
           <p className="mt-3 text-sm leading-loose text-gray-500 lg:mt-6 lg:text-base lg:leading-loose">
             We have been spending long hours in order to launch our new website.

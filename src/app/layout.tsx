@@ -1,4 +1,3 @@
-import { Toaster } from 'react-hot-toast';
 import GlobalDrawer from '@/app/shared/drawer-views/container';
 import GlobalModal from '@/app/shared/modal-views/container';
 import { ThemeProvider } from '@/app/shared/theme-provider';
@@ -36,7 +35,6 @@ export default async function RootLayout({
           <ThemeProvider>
             <NextProgress />
             {children}
-            <Toaster />
             <GlobalDrawer />
             <GlobalModal />
           </ThemeProvider>

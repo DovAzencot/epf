@@ -8,7 +8,7 @@ export const menuItems = [
   },
   // label end
   {
-    name: 'Point of Sale',
+    name: 'Menu',
     href: '/',
     icon: <PiCreditCardDuotone />,
   },

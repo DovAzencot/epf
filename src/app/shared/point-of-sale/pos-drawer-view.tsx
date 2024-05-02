@@ -33,7 +33,7 @@ export default function POSDrawerView({
     setTimeout(() => {
       setLoading(false);
       console.log('createOrder data ->', orderedItems);
-      toast.success(<Text as="b">Order created successfully</Text>);
+      toast.success(<Text as="b">Commande confirmée </Text>);
       onOrderSuccess && onOrderSuccess();
     }, 600);
   }
@@ -67,9 +67,9 @@ export default function POSDrawerView({
           <div>
             <EmptyProductBoxIcon className="mx-auto h-auto w-52 text-gray-400" />
             <Title as="h5" className="mt-6 text-center">
-              Your have no order
+              Panier vide
             </Title>
-            <Text className="mt-1 text-center">Start Ordering!!</Text>
+            <Text className="mt-1 text-center">Ajouter au moins un article ! </Text>
           </div>
           <div className="px-4">
             <Button
@@ -77,7 +77,7 @@ export default function POSDrawerView({
               variant="flat"
               onClick={() => (onOrderSuccess ? onOrderSuccess() : () => null)}
             >
-              Back To Ordering
+              Retour
             </Button>
           </div>
         </div>
@@ -91,7 +91,7 @@ export default function POSDrawerView({
               isLoading={loading}
               onClick={handleOrder}
             >
-              Order Now
+              Commander 
             </Button>
           </div>
         </div>
@@ -114,15 +114,12 @@ export function PriceCalculation() {
   return (
     <div className="mb-7 space-y-3.5">
       <p className="flex items-center justify-between">
-        <span className="text-gray-500">Subtotal</span>
+        <span className="text-gray-500">Total</span>
         <span className="font-medium text-gray-900">${total.toFixed(2)}</span>
       </p>
+  
       <p className="flex items-center justify-between">
-        <span className="text-gray-500">Delivery</span>
-        <span className="font-medium text-gray-900">Free</span>
-      </p>
-      <p className="flex items-center justify-between">
-        <span className="text-gray-500">Tax</span>
+        <span className="text-gray-500">TVA</span>
         <span className="font-medium text-gray-900">${tax.toFixed(2)}</span>
       </p>
       <p className="flex items-center justify-between border-t border-gray-300 pt-3.5 text-base font-semibold">

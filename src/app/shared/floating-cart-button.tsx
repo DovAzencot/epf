@@ -23,7 +23,7 @@ export default function FloatingCartButton({
     >
       <PiShoppingCartSimpleBold className="h-auto w-5" />
       <span>
-        {totalItems} &nbsp; {totalItems > 1 ? 'Items' : 'Item'}
+        {totalItems} &nbsp; {totalItems > 1 ? 'Articles' : 'Article'}
       </span>
     </button>
   );

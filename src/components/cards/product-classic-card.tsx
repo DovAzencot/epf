@@ -40,7 +40,7 @@ export default function ProductClassicCard({
             as="span"
             className="absolute start-5 top-5 rounded-lg bg-white px-2.5 py-1.5 text-xs font-semibold dark:bg-gray-200 dark:text-gray-700"
           >
-            {discount}% Discount
+            {discount}% de remise
           </Text>
         ) : null}
       </div>
@@ -70,7 +70,7 @@ export default function ProductClassicCard({
               className="w-full"
               variant="outline"
             >
-              Order
+              Ajouter
             </Button>
           )}
         </div>

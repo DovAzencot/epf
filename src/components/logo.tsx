@@ -8,7 +8,7 @@ export default function Logo({ iconOnly = false, ...props }: IconProps) {
     xmlns="http://www.w3.org/2000/svg"
     width={40}
     height={40}
-    fill="red"
+    fill="#E30613"
     viewBox="0 0 1134 1134"
     {...props}
   >

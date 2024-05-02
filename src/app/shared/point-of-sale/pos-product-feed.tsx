@@ -63,7 +63,7 @@ export default function POSProductsFeed() {
       {nextPage < productItemsFiltered?.length ? (
         <div className="mb-4 mt-5 flex flex-col items-center xs:pt-6 sm:pt-8">
           <Button isLoading={isLoading} onClick={() => handleLoadMore()}>
-            Load More
+            Voir plus 
           </Button>
         </div>
       ) : null}

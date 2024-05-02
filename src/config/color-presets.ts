@@ -32,6 +32,16 @@ export const usePresets = () => {
 
   return [
     {
+      name: 'Rose',
+      colors: {
+        lighter: '#ffe4e6', // Rose 100
+        light: '#fda4af', // Rose 300
+        default: '#E30613', // Rose 600
+        dark: '#be123c', // Rose 700
+        foreground: '#ffffff',
+      },
+    },
+    {
       name: DEFAULT_PRESET_COLOR_NAME,
       colors: DEFAULT_PRESET_COLORS,
     },
@@ -66,16 +76,7 @@ export const usePresets = () => {
         foreground: '#ffffff',
       },
     },
-    {
-      name: 'Rose',
-      colors: {
-        lighter: '#ffe4e6', // Rose 100
-        light: '#fda4af', // Rose 300
-        default: '#e11d48', // Rose 600
-        dark: '#be123c', // Rose 700
-        foreground: '#ffffff',
-      },
-    },
+    
     {
       name: 'Yellow',
       colors: {

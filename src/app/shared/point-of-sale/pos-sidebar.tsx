@@ -29,7 +29,7 @@ function PostSidebar({
     setTimeout(() => {
       setLoading(false);
       console.log('createOrder data ->', orderedItems);
-      toast.success(<Text as="b">Order created successfully</Text>);
+      toast.success(<Text as="b">Commande créée </Text>);
     }, 600);
   }
 
@@ -37,11 +37,11 @@ function PostSidebar({
     <>
       <div className="flex items-center justify-between gap-3 px-5 py-3 lg:px-7">
         <Title as="h5" className="font-semibold">
-          Customer Order
+          Mon panier
         </Title>
         {orderedItems?.length > 0 && (
           <Button variant="text" onClick={resetCart} className="pe-0">
-            Clear All
+           Tout supprimer
           </Button>
         )}
       </div>
@@ -62,9 +62,9 @@ function PostSidebar({
           <div>
             <EmptyProductBoxIcon className="mx-auto h-auto w-52 text-gray-400" />
             <Title as="h5" className="mt-6 text-center">
-              Your have no order
+              Votre panier est vide
             </Title>
-            <Text className="mt-1 text-center">Start Ordering!!</Text>
+            <Text className="mt-1 text-center">Commander maintenant</Text>
           </div>
         </div>
       )}
@@ -77,7 +77,7 @@ function PostSidebar({
               isLoading={loading}
               onClick={handleOrder}
             >
-              Order Now
+              Commander
             </Button>
           </div>
         </div>

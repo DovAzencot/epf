@@ -1,5 +1,5 @@
+import React from 'react';
 
-import React, { useState } from 'react';
 const SignupForm = () => {
   return (
     <div className="max-w-md mx-auto mt-8 p-6 bg-gray-100 rounded-lg shadow-md">
@@ -17,7 +17,7 @@ const SignupForm = () => {
           <label htmlFor="password2" className="block text-gray-700 font-medium mb-1">Confirmez le mot de passe :</label>
           <input type="password" id="password2" name="password2" className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500" required />
         </div>
-        <button type="submit" className="w-full bg-blue-500 text-white font-semibold py-2 rounded-lg hover:bg-blue-600 transition duration-300">S'inscrire</button>
+        <button type="submit" className="w-full bg-blue-500 text-white font-semibold py-2 rounded-lg hover:bg-blue-600 transition duration-300">S&apos;inscrire</button>
       </form>
     </div>
   );

@@ -4,15 +4,17 @@ import {useState} from 'react';
 import {createUserWithEmailAndPassword} from 'firebase/auth';
 import { auth } from '../firebase-config';
 import { useRouter } from 'next/navigation';
-
+import ProfileMenu from 'src/layouts/profile-menu'
 const SignupForm = () => {
   const [registerEmail, setRegisterEmail]= useState("");
   const [registerPassword, setRegisterPassword]= useState("");
+  const router = useRouter();
   const register = async () => {
-    const router = useRouter();
+   
     try {
       const user = await createUserWithEmailAndPassword(auth, registerEmail, registerPassword);
-      router.push('/main/point-of-sale/page');
+      setRegisterEmail(registerEmail);
+      router.push('/point-of-sale');
     } catch (error) {
       if (error instanceof Error) {
         console.log(error.message);

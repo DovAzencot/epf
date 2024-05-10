@@ -2,10 +2,13 @@
 import React from 'react';
 import {useState} from 'react';
 import {createUserWithEmailAndPassword, onAuthStateChanged, signOut, signInWithEmailAndPassword} from 'firebase/auth';
-import { auth } from '../firebase-config';
+import { auth, useAuthContext } from '../authContext';
 import { useRouter } from 'next/navigation';
 
 const SignupForm = () => {
+  const me  = useAuthContext(); // Retrieve user context
+
+  
   const [registerEmail, setRegisterEmail]= useState("");
   const [registerPassword, setRegisterPassword]= useState("");
   const [loginEmail, setLoginEmail] = useState("");
@@ -16,6 +19,7 @@ const SignupForm = () => {
   const [user, setUser] = useState({});
 
   onAuthStateChanged(auth, (currentUser) => {
+    //@ts-ignore
     setUser(currentUser);
   });
 
@@ -50,6 +54,9 @@ const SignupForm = () => {
   const logout = async () => {
     await signOut(auth);
   };
+
+
+  console.log(me)
   return (
     <div className="max-w-md mx-auto mt-8 p-6 bg-gray-100 rounded-lg shadow-md">
       
@@ -66,7 +73,10 @@ const SignupForm = () => {
         </div>
         <div className="mb-4">
           <label htmlFor="email" className="block text-gray-700 font-medium mb-1">Utilisateur :</label>
-          {user?.email} 
+         
+          {
+           //@ts-ignore
+          user?.email} 
         </div>
         <button type="button" className="w-full bg-blue-500 text-white font-semibold py-2 rounded-lg hover:bg-blue-600 transition duration-300"  onClick={register} >S&apos;inscrire</button>
 

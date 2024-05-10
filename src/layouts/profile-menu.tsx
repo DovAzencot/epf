@@ -2,10 +2,11 @@
 
 import { Title, Text, Avatar, Button, Popover } from 'rizzui';
 import cn from '@/utils/class-names';
-import { signOut } from 'next-auth/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { AuthContextType, auth, useAuthContext } from '@/app/(main)/authContext';
+import { signOut } from 'firebase/auth';
 
 export default function ProfileMenu({
   buttonClassName,
@@ -74,6 +75,16 @@ const menuItems = [
 ];
 
 function DropdownMenu() {
+
+  
+
+  const {user}  = useAuthContext()  as AuthContextType;; // Retrieve user context
+
+  const logout = async () => {
+    await signOut(auth);
+  };
+
+  
   return (
     <div className="w-64 text-left rtl:text-right">
       <div className="flex items-center border-b border-gray-300 px-6 pb-5 pt-6">
@@ -85,7 +96,7 @@ function DropdownMenu() {
           <Title as="h6" className="font-semibold">
             Aura Tordjman
           </Title>
-          <Text className="text-gray-600">auratos@gmail.com</Text>
+          <Text className="text-gray-600">{user?.email}</Text>
         </div>
       </div>
       <div className="grid px-3.5 py-3.5 font-medium text-gray-700">
@@ -103,7 +114,7 @@ function DropdownMenu() {
         <Button
           className="h-auto w-full justify-start p-0 font-medium text-gray-700 outline-none focus-within:text-gray-600 hover:text-gray-900 focus-visible:ring-0"
           variant="text"
-          onClick={() => signOut()}
+          onClick={() => logout()}
         >
           Se déconnecter
         </Button>

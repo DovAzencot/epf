@@ -67,7 +67,7 @@ function ProfileMenuPopover({ children }: React.PropsWithChildren<{}>) {
 
 const menuItems = [
   {
-    name: 'My Profile',
+    name: 'Se connecter',
     href: '/',
   },
 
@@ -105,7 +105,7 @@ function DropdownMenu() {
           variant="text"
           onClick={() => signOut()}
         >
-          Sign Out
+          Se déconnecter
         </Button>
       </div>
     </div>

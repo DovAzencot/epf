@@ -32,7 +32,7 @@ export const usePresets = () => {
 
   return [
     {
-      name: 'Rose',
+      name: 'Rouge Crous',
       colors: {
         lighter: '#ffe4e6', // Rose 100
         light: '#fda4af', // Rose 300

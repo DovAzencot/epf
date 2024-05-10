@@ -68,7 +68,7 @@ function ProfileMenuPopover({ children }: React.PropsWithChildren<{}>) {
 const menuItems = [
   {
     name: 'Se connecter',
-    href: '/',
+    href: '/login',
   },
 
 ];
